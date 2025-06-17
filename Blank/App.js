@@ -4,16 +4,16 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import React, {useState} from 'react';
 
 // Texto que cambia de Hola Mundo a Estado Cambiado
-const Texto = () => {
+const Texto = ( {style} ) => {
   const [contenido, setContenido] = useState('Hola mundo')
   const actualizaTexto = () => {setContenido('Estado modificado')}
   return (
-    <Text onPress={actualizaTexto}> {contenido} </Text>
+    <Text style={[styles.text, style]} onPress={actualizaTexto}> {contenido} </Text>
   )
-}
+} 
 
 // Boton con cambio de estado de un Presionar a Presionado
-const PresionarBoton = () => {
+/* const PresionarBoton = () => {
   const [titulo, setTitulo] = useState('Presionar');
   const actualizarAhora = () => {
     setTitulo('¡Presionado!');
@@ -21,7 +21,7 @@ const PresionarBoton = () => {
   return (
       <Button title={titulo} onPress={actualizarAhora} />
   );
-}
+} */ 
 
 /* ZONA 2: MAIN */
 export default function App() {
@@ -29,10 +29,10 @@ export default function App() {
     /* Todos los componentes deben ir dentro de un view */
     <View style={styles.container}>
 
-      <Texto> </Texto>
-      <Texto> </Texto>
-      <Texto> </Texto>
-      <PresionarBoton></PresionarBoton>
+      <Texto style={styles.yellow}> </Texto>
+      <Texto style={styles.blue}> </Texto>
+      <Texto style={styles.black}> </Texto>
+      
       <StatusBar style="auto" />
 
     </View>
@@ -45,7 +45,23 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
+    alignItems: 'flex-strech',
     justifyContent: 'center',
   },
+  text: {
+    color: 'white',
+    fontSize: 27,
+  },
+  yellow: {
+    backgroundColor:'yellow',
+    color:'black',
+  },
+
+  blue: {
+    backgroundColor:'blue',
+  },
+
+  black: {
+    backgroundColor:'black',
+  }
 });
