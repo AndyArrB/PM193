@@ -44,12 +44,12 @@ export default function App() {
       />
 
       {/* Esto es para SectionList */}
-      <Text style={styles.title}>SectionList - Agrupado por Apellido</Text>
+      <Text style={styles.title}>SectionList - Agrupado por Apellido</Text> {/* Muestra el título */}
       <SectionList
-        sections={sectionData}
-        keyExtractor={(item, index) => item + index}
-        renderItem={({ item }) => <Text style={styles.item}>{item}</Text>}
-        renderSectionHeader={({ section: { title } }) => (
+        sections={sectionData} /* Se pasan los datos a mostrar en la SectionList */
+        keyExtractor={(item, index) => item + index} /* Se identifica de manera unica el item, Andrea0, Carol1 */
+        renderItem={({ item }) => <Text style={styles.item}>{item}</Text>} /* defino cada elemento de una sección (nombres)*/
+        renderSectionHeader={({ section: { title } }) => ( /* defino como mostrar cada seccion (apellidos) */
           <Text style={styles.header}>{title}</Text> 
         )}
       />
