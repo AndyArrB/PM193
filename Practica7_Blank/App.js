@@ -1,9 +1,5 @@
-import React, {useState} from 'react';
-import { StyleSheet, Text, View, Button, Alert, ScrollView, TouchableOpacity, TouchableHighlight, TouchableWithoutFeedback, Pressable, Switch } from 'react-native';
 /* Zona 1: Lugar de las importaciones */  
 import { StatusBar } from 'expo-status-bar';
-import { Button as ButtonPaper, Provider as ProveedorPaper} from 'react-native-paper';
-import { Button as BotonElements } from 'react-native-elements';
 import {StyleSheet,Text,View,Button,Alert,ScrollView,TouchableOpacity,TouchableHighlight,TouchableNativeFeedback,Pressable,Switch,TouchableWithoutFeedback} from 'react-native';
 import React, { useState } from 'react';
 import { Button as ButtonPaper, Provider as ProveedorPaper } from 'react-native-paper'; 
