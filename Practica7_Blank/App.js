@@ -1,34 +1,80 @@
 /*ZONA 1: Importaciones */
-import React, {useEffect, useState} from "react";
-import {View, StatusBar} from 'react-native';
-import SplashScreen from "./src/screens/SplashScreen";
-import HomeScreen from "./src/screens/HomeScreen";
+import React from "react";
+import { useRef } from "react";
+import { ScrollView, StatusBar, StyleSheet, Text } from "react-native";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { Button } from "react-native-web";
 
 
+const App = () => {
 
-//ZONA 2: Main 
-export default function App() {
-
-  const [isLoading, setLoading] = useState(true);
-
-  useEffect( () => {
-
-    const timer = setTimeout( () => {
-      setLoading(false);
-    }, 2500);
-
-    return () => clearTimeout(timer);
-  }, [] );
+  const ScrollViewRef = useRef(null);
 
   return (
-    <View style={{flex:1}}>
 
-      <StatusBar hidden></StatusBar>
-      {isLoading ? <SplashScreen/> : <HomeScreen/>}
-    </View>
-  )
 
+  <SafeAreaProvider>
+
+    <SafeAreaView style={styles.container} edges={['top']}>
+
+      <ScrollView style={styles.scrollview} ref={ScrollViewRef} horizontal={false}>
+
+        <Text style={styles.text}>
+
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+          Texto que habrá en el espacio
+
+        </Text>
+
+      </ScrollView>
+
+    </SafeAreaView>
+
+  </SafeAreaProvider>
+  );
 };
 
+// Definimos estilos
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,                            
+    paddingTop: StatusBar.currentHeight 
+  },
+  scrollview: {
+    backgroundColor: 'green',         
+  },
+  text: {
+    fontSize: 40,                       
+    padding: 12,                         
+  },
+});
 
-//ZONA 3: Estilos- Estética
+
+// Exportamos 
+export default App;
