@@ -62,5 +62,5 @@ const styles = StyleSheet.create({
   container: { flex: 1, paddingTop: 50, paddingHorizontal: 20 },
   title: { fontSize: 20, fontWeight: 'bold', marginVertical: 10 },
   item: { padding: 10, fontSize: 16 },
-  header: { fontSize: 18, fontWeight: 'bold', backgroundColor: '#ddd', padding: 5 },
+  header: { fontSize: 18, fontWeight: 'bold', backgroundColor: '#ddd', padding: 5 },
 });
